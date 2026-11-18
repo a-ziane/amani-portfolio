@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amani Ziane — Applied Math · AI · Computational Biology</title>
+  <meta name="description" content="Amani Ziane — Applied & Computational Mathematics student at USC building AI products for students, patients and communities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="attractor" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <a href="#top" class="logo">a<span>.</span>z</a>
+    <ul>
+      <li><a href="#work">work</a></li>
+      <li><a href="#courses">courses</a></li>
+      <li><a href="#path">path</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="top" class="hero">
+    <p class="mono kicker">dx/dt = σ(y − x) &nbsp;·&nbsp; ∂ curiosity / ∂t &gt; 0</p>
+    <h1>Amani <em>Ziane</em></h1>
+    <p class="lede">
+      I study <strong>Applied &amp; Computational Mathematics</strong> at USC and build AI products
+      that solve problems I've actually seen, from doctor queues in Algeria to exam prep to
+      finding modest fashion online.
+    </p>
+    <div class="coords mono">
+      <span>34.02° N, 118.28° W</span><span class="sep">⇄</span><span>36.75° N, 3.06° E</span>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="#work">See the work ↓</a>
+      <a class="btn" href="https://github.com/a-ziane" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <p class="hint mono">the line behind this text is a Lorenz attractor, integrated live with RK4 ✦ move your cursor</p>
+  </header>
+
+  <main>
+    <!-- ABOUT -->
+    <section class="about reveal">
+      <div class="label mono">§0 — about</div>
+      <div class="about-grid">
+        <p class="big">
+          Equations on the whiteboard, products in the real world. I like turning a
+          messy, human problem into a model, and then shipping that model as something people use.
+        </p>
+        <dl class="facts">
+          <div><dt>major</dt><dd>B.S. Applied &amp; Computational Mathematics</dd></div>
+          <div><dt>minors</dt><dd>AI Applications · Computational Biology &amp; Bioinformatics</dd></div>
+          <div><dt>school</dt><dd>University of Southern California, class of 2028</dd></div>
+          <div><dt>roots</dt><dd>Algeria 🇩🇿 → Los Angeles</dd></div>
+          <div><dt>seeking</dt><dd>Software / ML / data internships</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="zellige" aria-hidden="true"></div>
+
+    <!-- PROJECTS -->
+    <section id="work" class="reveal">
+      <div class="label mono">§1 — selected work</div>
+      <h2>Things I've <em>built</em></h2>
+
+      <div class="projects">
+        <article class="project" data-n="01">
+          <header>
+            <span class="status live">in progress · team of 5</span>
+            <h3>Yousra</h3>
+            <p class="tag">Modest-fashion discovery, powered by AI</p>
+          </header>
+          <p>
+            Built the backend that scrapes and filters modest clothing listings from across the web
+            using the Serper and Gemini APIs. Now working on a recommendation model and a
+            modesty-level detection model so shoppers can search by how covered they want to be.
+          </p>
+          <ul class="stack mono"><li>TypeScript</li><li>Serper API</li><li>Gemini</li><li>RecSys</li><li>CV / classification</li></ul>
+          <a class="link" href="https://github.com/a-ziane/Yousra" target="_blank" rel="noopener">repo ↗</a>
+        </article>
+
+        <article class="project" data-n="02">
+          <header>
+            <span class="status live">building since Sep 2026</span>
+            <h3>BAC DZ</h3>
+            <p class="tag">Personalized prep for Algeria's BAC exam</p>
+          </header>
+          <p>
+            A web app that gives each student a personal dashboard, a roadmap, lessons and quizzes
+            for the baccalaureate. I piloted the Math track with 3 students and used their feedback
+            to shape the learning flow.
+          </p>
+          <ul class="stack mono"><li>Full-stack web</li><li>Adaptive quizzes</li><li>EdTech</li><li>User testing</li></ul>
+        </article>
+
+        <article class="project" data-n="03">
+          <header>
+            <span class="status shipped">shipped</span>
+            <h3>patientdz.com</h3>
+            <p class="tag">Find a doctor in your town, skip the queue</p>
+          </header>
+          <p>
+            A platform connecting Algerian patients with doctors and dentists nearby. It handles
+            appointment scheduling, organizes the waiting-room queue so patients can see their place
+            in line, and makes local doctors easy to find. Built with an AI-assisted workflow, with
+            companion doctor and admin dashboards.
+          </p>
+          <ul class="stack mono"><li>JavaScript</li><li>Scheduling</li><li>Queue system</li><li>AI-assisted dev</li></ul>
+          <a class="link" href="https://patientdz.com" target="_blank" rel="noopener">live ↗</a>
+          <a class="link" href="https://github.com/a-ziane/patientdz" target="_blank" rel="noopener">repo ↗</a>
+        </article>
+
+        <article class="project" data-n="04">
+          <header>
+            <span class="status award">🥉 3rd place · Techstars</span>
+            <h3>Finnley</h3>
+            <p class="tag">Gamified financial literacy</p>
+          </header>
+          <p>
+            Built and pitched at Techstars Startup Weekend (March 2026). In one weekend we went from
+            idea to user discovery interviews, business and pricing models, and a final pitch to judges.
+          </p>
+          <ul class="stack mono"><li>Product</li><li>User discovery</li><li>Pricing</li><li>Pitching</li></ul>
+        </article>
+      </div>
+
+      <h3 class="sub mono">more from the lab →</h3>
+      <ul class="mini">
+        <li><a href="https://github.com/a-ziane/TrojanPath" target="_blank" rel="noopener"><b>TrojanPath</b><span>AI career guidance for USC students, with pathways, weekly goals and progress tracking</span></a></li>
+        <li><a href="https://github.com/a-ziane/ZianeComms" target="_blank" rel="noopener"><b>ZianeComms</b><span>Recovers dropped callers, triages urgency and matches them to a responder. Built at the InnovateLA × USC Dual-Use Hackathon</span></a></li>
+        <li><a href="https://github.com/a-ziane/ai-coding-agent" target="_blank" rel="noopener"><b>ai-coding-agent</b><span>Local coding agent that explores, creates and edits code with tool-calling LLMs</span></a></li>
+        <li><a href="https://github.com/a-ziane/Resume-Radar" target="_blank" rel="noopener"><b>Resume Radar</b><span>Parses PDF resumes, compares against job descriptions and scores 0–100</span></a></li>
+        <li><a href="https://github.com/a-ziane/TaskForge" target="_blank" rel="noopener"><b>TaskForge</b><span>Flask + React task manager with JWT auth</span></a></li>
+        <li><a href="https://github.com/a-ziane/ziane-auto" target="_blank" rel="noopener"><b>Ziane Auto</b><span>Car dealership platform with Telegram-bot order delivery</span></a></li>
+      </ul>
+    </section>
+
+    <!-- COURSEWORK -->
+    <section id="courses" class="reveal">
+      <div class="label mono">§2 — coursework</div>
+      <h2>A periodic table of <em>what I've studied</em></h2>
+      <p class="note">Hover or tap a tile to see the equation I associate with it.</p>
+
+      <div class="legend mono">
+        <span class="k math">mathematics</span>
+        <span class="k cs">computer science</span>
+        <span class="k ai">artificial intelligence</span>
+        <span class="k bio">computational biology</span>
+      </div>
+
+      <div class="table" id="ptable"></div>
+    </section>
+
+    <!-- PATH -->
+    <section id="path" class="reveal">
+      <div class="label mono">§3 — path</div>
+      <h2>The <em>trajectory</em> so far</h2>
+      <ol class="timeline">
+        <li>
+          <time class="mono">Nov 2026 →</time>
+          <h4>Yousra: backend &amp; ML</h4>
+          <p>Scraping and filtering pipeline; recommendation and modesty-detection models in progress.</p>
+        </li>
+        <li>
+          <time class="mono">Oct 2026</time>
+          <h4>InnovateLA × USC Dual-Use Hackathon</h4>
+          <p>Built ZianeComms for the Resilience Communications track.</p>
+        </li>
+        <li>
+          <time class="mono">Sep 2026 →</time>
+          <h4>Founder, BAC DZ</h4>
+          <p>Launched a Math-track pilot with 3 students preparing for the BAC.</p>
+        </li>
+        <li>
+          <time class="mono">Summer 2026</time>
+          <h4>Shipped patientdz.com</h4>
+          <p>Patient, doctor and admin platforms for appointments and live queues.</p>
+        </li>
+        <li>
+          <time class="mono">Mar 2026</time>
+          <h4>Techstars Startup Weekend · 3rd place</h4>
+          <p>Finnley: gamified financial literacy, from user discovery to pitch.</p>
+        </li>
+        <li>
+          <time class="mono">Jan – May 2025</time>
+          <h4>Math &amp; CS Tutor, Preply</h4>
+          <p>Taught mathematics and computer science one-on-one to students online.</p>
+        </li>
+        <li>
+          <time class="mono">→ May 2028</time>
+          <h4>B.S. Applied &amp; Computational Mathematics, USC</h4>
+          <p>Minors in AI Applications and Computational Biology &amp; Bioinformatics.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact reveal">
+      <div class="label mono">§4 — contact</div>
+      <h2>Let's build <em>something</em>.</h2>
+      <p>I'm looking for internships in software engineering, machine learning and data. I'm always happy to talk about products, math, or Algeria.</p>
+      <div class="links">
+        <a href="mailto:amaniziane2006@gmail.com" class="btn primary">amaniziane2006@gmail.com</a>
+        <a href="https://www.linkedin.com/in/amani-ziane-81b667355" target="_blank" rel="noopener" class="btn">LinkedIn ↗</a>
+        <a href="https://github.com/a-ziane" target="_blank" rel="noopener" class="btn">GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mono">
+    <span>© <span id="yr"></span> Amani Ziane</span>
+    <span>σ = 10 · ρ = 28 · β = 8/3</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
