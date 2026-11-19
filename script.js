@@ -55,7 +55,7 @@ function resize() {
   dpr = Math.min(window.devicePixelRatio || 1, 2);
   W = cv.width = innerWidth * dpr;
   H = cv.height = innerHeight * dpr;
-  ctx.fillStyle = "#0b100f"; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = "#f5efe3"; ctx.fillRect(0, 0, W, H);
 }
 resize();
 addEventListener("resize", resize);
@@ -72,8 +72,8 @@ function rk4(p) {
 
 // two trajectories that start 1e-3 apart: sensitive dependence, in green and red
 let trails = [
-  { p: [0.1, 0, 0], color: [47, 210, 138] },
-  { p: [0.101, 0, 0], color: [229, 83, 61] },
+  { p: [0.1, 0, 0], color: [196, 87, 46] },
+  { p: [0.101, 0, 0], color: [47, 93, 80] },
 ];
 let angle = 0, mouseX = 0.5, mouseY = 0.5;
 addEventListener("pointermove", e => { mouseX = e.clientX / innerWidth; mouseY = e.clientY / innerHeight; });
@@ -88,7 +88,7 @@ function project([x, y, z]) {
 }
 
 function frame() {
-  ctx.fillStyle = "rgba(11,16,15,0.035)";
+  ctx.fillStyle = "rgba(245,239,227,0.04)";
   ctx.fillRect(0, 0, W, H);
   angle += 0.0015;
   for (const t of trails) {
@@ -96,7 +96,7 @@ function frame() {
       const a = project(t.p);
       t.p = rk4(t.p);
       const b = project(t.p);
-      ctx.strokeStyle = `rgba(${t.color.join(",")},0.55)`;
+      ctx.strokeStyle = `rgba(${t.color.join(",")},0.45)`;
       ctx.lineWidth = 1.1 * dpr;
       ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke();
     }
